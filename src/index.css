@@ -162,7 +162,7 @@ h4 {
 }
 
 section {
-  @apply relative min-h-screen h-screen flex
+  @apply relative min-h-screen h-dvh flex
   place-items-center justify-center overflow-x-hidden;
 }
 
