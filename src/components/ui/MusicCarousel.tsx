@@ -90,7 +90,7 @@ export default function MusicCarousel() {
     return (
         <div className="flex flex-col items-center w-fit mx-auto md:items-end gap-3 ">
             <div className='flex flex-col md:flex-row md:items-center'>
-                <div className="shrink-0 relative z-10 w-72 md:w-auto md:h-60 xl:h-64 bg-black">
+                <div className="shrink-0 relative z-10 w-72 md:w-auto md:h-60 xl:h-64 h-fit">
                     <img
                         src={Playlist[index].image}
                         alt='Music'
