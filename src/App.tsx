@@ -12,7 +12,7 @@ import Navbar from "./components/Navbar";
 
 function App() {
   const [loading, setLoading] = useState<boolean>(true)
-  const [loaded, setLoaded] = useState<boolean>(false)
+  const [loaded, setLoaded] = useState<boolean>(true)
   const [activeSection, setActiveSection] = useState({
     index: 0,
     origin: 0,
