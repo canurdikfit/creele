@@ -71,7 +71,7 @@ export default function ProjectCarousel() {
                         grabCursor={true}
                         onSlideChange={onSwiperChange}
                         modules={[EffectCards, Autoplay]}
-                        className="xl:h-96 xl:w-80 w-64 h-80"
+                        className="xl:h-96 xl:w-80 w-64 h-60"
                     >
                         {
                             Projects.map((item, idx) => {

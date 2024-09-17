@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 export default function About() {
     return (
         <section className='section about items-end'>
-            <div className="relative z-10 grid mt-auto lg:grid-cols-2 items-end h-[80vh] w-screen">
+            <div className="relative z-10 grid mt-auto lg:grid-cols-2 items-center md:items-end h-[80vh] w-screen">
                 <div className='px-5 md:pl-12 lg:pl-20 xl:pl-28 xl:pt-44 text-left xl:pb-28'>
                     <h2>Who We Are</h2>
                     <p className='max-w-xl md:text-xl xl:text-2xl opacity-80 mb-2'>Creele Animation Studios  is a family entertainment and trans-media production studio. Our mission is to magnificently portray the creative brilliance of Africa through breathtaking storytelling of our rich heritage using animated, interactive entertainment, sound and motionpictures.</p>
@@ -21,7 +21,7 @@ export default function About() {
                         </button>
                     </Link>
                 </div>
-                <div className="relative h-fit overflow-hidden flex items-end justify-end">
+                <div className="relative h-fit overflow-hidden items-end justify-end hidden md:flex">
                     <img
                         src={LadyFire}
                         alt="Lady Art"

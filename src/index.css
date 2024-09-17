@@ -308,9 +308,9 @@ input:-webkit-autofill:active {
 }
 
 /* --------------- FullPage --------------- */
-.about.fp-table {
+/* .about.fp-table {
   justify-content: end !important;
-}
+} */
 
 .fp-warning,
 .fp-watermark {

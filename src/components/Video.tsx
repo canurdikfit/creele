@@ -2,7 +2,7 @@ import VideoPlayer from './ui/VideoPlayer';
 
 export default function Video() {
     return (
-        <section className='flex-row items-center xl:items-end pb-10 padding text-center section video'>
+        <section className='flex-row items-center xl:items-end md:pb-10 padding text-center section video'>
             <div className="relative z-10 space-y-2">
                 <h3>Spotlight on creele studios</h3>
 
