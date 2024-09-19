@@ -55,12 +55,13 @@ export default function VideoPlayer() {
                 <Swiper
                     ref={SlideRef}
                     onSlideChange={onSlideChange}
-                    slidesPerView={'auto'}
-                    className="mySwiper md:max-w-2xl xl:max-w-3xl w-fit h-48 md:h-[410px] xl:h-[480px]">
+                    slidesPerView={1}
+                    className="mySwiper md:max-w-md xl:max-w-3xl w-fit h-48 md:h-[280px] xl:h-[480px]">
                     {VideosURL.map((items, index) => {
                         return (
                             <SwiperSlide
-                                key={index}>
+                                key={index}
+                            >
                                 <div className="relative w-fit h-full">
                                     <img
                                         src={VideoPlayerBg}

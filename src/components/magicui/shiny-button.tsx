@@ -43,7 +43,7 @@ const ShinyButton = ({
     >
       <div className="flex items-center justify-center gap-2">
         <span
-          className="relative block h-full w-full text-xs md:text-base underline underline-offset-2 tracking-wide text-[rgb(255,255,255,95%)] dark:font-light dark:text-[rgb(255,255,255,90%)]"
+          className="relative block h-full w-full text-xs md:text-sm underline underline-offset-2 tracking-wide text-[rgb(255,255,255,95%)] dark:font-light dark:text-[rgb(255,255,255,90%)]"
           style={{
             maskImage:
               "linear-gradient(-75deg,hsl(var(--primary)) calc(var(--x) + 20%),transparent 30%),hsl(var(--primary)) 100%))",

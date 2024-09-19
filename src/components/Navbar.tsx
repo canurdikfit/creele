@@ -5,14 +5,14 @@ import RoundBtn from './../assets/artifacts/round_btn.png';
 import { HiMiniBars3 } from "react-icons/hi2";
 import React from 'react';
 
-export default function Navbar(props: { activeIndex: number, slideTOPass: number }) {
+export default function Navbar() {
     const [state, setState] = React.useState<boolean>(false)
     const { pathname } = useLocation()
 
     return (
         <nav
             id='menu'
-            className={`fixed z-50 inset-x-0 ${props.activeIndex > props.slideTOPass ? '-translate-y-40' : 'translate-y-0'} transition-transform ease-in-out duration-500 top-0 md:top-7`}>
+            className={`fixed z-50 inset-x-0 transition-transform ease-in-out duration-500 top-0 md:top-7`}>
             <div
                 className='relative max-w-2xl lg:max-w-4xl xl:max-w-5xl mx-auto h-32 flex items-center'>
                 <img
@@ -20,7 +20,7 @@ export default function Navbar(props: { activeIndex: number, slideTOPass: number
                     alt="Navbar"
                     className='h-full w-full object-contain object-center absolute hidden md:block'
                 />
-                <div className='relative z-10 px-[5%] pb-4 flex items-center justify-between w-full'>
+                <div className='relative z-10 pr-[5%] pl-[8.5%] pb-2 flex items-center justify-between w-full'>
                     <Link to={'/'} className='flex-shrink-0'>
                         <img
                             src={Creele}

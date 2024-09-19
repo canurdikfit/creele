@@ -6,6 +6,7 @@ import { IoMailOutline } from 'react-icons/io5'
 import { LuBuilding2 } from 'react-icons/lu'
 import Creele from './../assets/icons/creele.png';
 import { Link } from 'react-router-dom'
+import BoxReveal from './magicui/box-reveal'
 
 export default function Footer() {
     return (
@@ -19,7 +20,12 @@ export default function Footer() {
                                     key={index}
                                     className='flex items-center gap-5'
                                 >
-                                    <items.icon className='text-[#FBD40D] text-xl' /> <span className='text-[15px] font-normal'>{items.label}</span>
+                                    <items.icon className='text-[#FBD40D] text-xl' />
+                                    <BoxReveal
+                                        duration={0.6}
+                                        boxColor='#FBD40D'>
+                                        <span className='text-[15px] font-normal'>{items.label}</span>
+                                    </BoxReveal>
                                 </li>
                             )
                         })
@@ -66,9 +72,13 @@ export default function Footer() {
                 </div>
                 <div className="flex items-center gap-1 text-[#A7A7A7]">
                     <FaRegCopyright />
-                    <span className='text-[13px]'>
-                        Creele Animation Studios. All rights reserved.
-                    </span>
+                    <BoxReveal
+                        duration={0.6}
+                        boxColor='#FBD40D'>
+                        <span className='text-[13px]'>
+                            Creele Animation Studios. All rights reserved.
+                        </span>
+                    </BoxReveal>
                 </div>
             </div>
         </footer>

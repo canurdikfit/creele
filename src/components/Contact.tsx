@@ -7,9 +7,7 @@ export default function Contact(props: { page?: boolean }) {
     return (
         <section className='section pb-10'>
             {props.page &&
-                <Navbar
-                    activeIndex={1}
-                    slideTOPass={1} />}
+                <Navbar />}
             <img
                 src={FillBackground}
                 alt='Background'

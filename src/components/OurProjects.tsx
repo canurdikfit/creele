@@ -1,7 +1,7 @@
 import RectangleBtn from './../assets/artifacts/rectangular_btn.png';
 import { HeadingOverlay } from './ui/HeadingOverlay';
 import { Link } from 'react-router-dom';
-
+import { motion } from "framer-motion"
 
 export default function OurProjects(props: {
     type?: string,
@@ -18,17 +18,71 @@ export default function OurProjects(props: {
                 <div className='space-y-3 relative z-10'>
                     {
                         props.type && (
-                            <span className='block w-fit py-1 text-sm lg:text-base px-6 bg-white/20 rounded-full font-medium'>{props.type}</span>
+                            <motion.span
+                                initial={{
+                                    translateY: 100,
+                                    opacity: 0
+                                }}
+                                whileInView={{
+                                    translateY: 0,
+                                    opacity: 1,
+                                }}
+                                transition={{
+                                    ease: 'linear',
+                                    duration: .3
+                                }}
+
+                                className='block w-fit py-1 text-sm lg:text-base px-6 bg-white/20 rounded-full font-medium'>{props.type}</motion.span>
                         )
                     }
-                    <h2 className='relative inline-block after:absolute after:bottom-0 after:w-[35%] after:h-1 after:left-0 after:bg-[#FBD40D] after:rounded md:mb-4'>
+                    <motion.h2
+                        initial={{
+                            translateY: 100,
+                            opacity: 0
+                        }}
+                        whileInView={{
+                            translateY: 0,
+                            opacity: 1,
+                        }}
+                        transition={{
+                            ease: 'linear',
+                            duration: .5
+                        }}
+                        className='relative inline-block after:absolute after:bottom-0 after:w-[35%] after:h-1 after:left-0 after:bg-[#FBD40D] after:rounded md:mb-4'>
                         {props.heading}
-                    </h2>
-                    <p className='max-w-2xl lg:text-xl xl:text-2xl opacity-80'>
+                    </motion.h2>
+                    <motion.p
+                        initial={{
+                            translateY: 100,
+                            opacity: 0
+                        }}
+                        whileInView={{
+                            translateY: 0,
+                            opacity: 1,
+                        }}
+                        transition={{
+                            ease: 'linear',
+                            duration: .5,
+                            delay: .2
+                        }}
+                        className='max-w-2xl lg:text-xl xl:text-2xl opacity-80'>
                         {props.content}
-                    </p>
+                    </motion.p>
                     <Link to={`/product/${props.projectUrl}`} className='inline-block'>
-                        <button className='relative xl:h-28 xl:w-52 md:h-20 md:w-40 h-16 w-36'>
+                        <motion.button
+                            initial={{
+                                translateY: 100,
+                                opacity: 0
+                            }}
+                            whileInView={{
+                                translateY: 0,
+                                opacity: 1,
+                            }}
+                            transition={{
+                                ease: 'linear',
+                                duration: .5,
+                                delay: .3
+                            }} className='relative xl:h-28 xl:w-52 md:h-20 md:w-40 h-16 w-36'>
                             <img
                                 src={RectangleBtn}
                                 alt="Button"
@@ -36,7 +90,7 @@ export default function OurProjects(props: {
                                 className='btn_designed'
                             />
                             <h6 className='relative z-10 xl:text-2xl md:text-xl text-lg btn_text_border'>View Project</h6>
-                        </button>
+                        </motion.button>
                     </Link>
                 </div>
                 <div className='flex items-center justify-center md:justify-end'>
