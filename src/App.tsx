@@ -9,15 +9,11 @@ import Services from "./components/Services";
 import Music from "./components/Music";
 import Contact from "./components/Contact";
 import Navbar from "./components/Navbar";
+import { ScrollRestoration } from "react-router-dom";
 
 function App() {
   const [loading, setLoading] = useState<boolean>(true)
-  const [loaded, setLoaded] = useState<boolean>(true)
-  const [activeSection, setActiveSection] = useState({
-    index: 0,
-    origin: 0,
-    directioin: '',
-  });
+  const [loaded, setLoaded] = useState<boolean>(false)
 
 
   return (
@@ -35,10 +31,8 @@ function App() {
           />
         ) : (
           <>
-
+            <ScrollRestoration />
             <Navbar
-              activeIndex={activeSection.index}
-              slideTOPass={2}
             />
 
             <ReactFullpage
@@ -51,13 +45,6 @@ function App() {
               scrollOverflowReset
               autoScrolling
               scrollingSpeed={700}
-              onLeave={(origin, destination, direction) => {
-                setActiveSection({
-                  index: destination.index,
-                  origin: origin.index,
-                  directioin: direction
-                });
-              }}
               licenseKey=""
               render={({ fullpageApi }) => {
                 return (

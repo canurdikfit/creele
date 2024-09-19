@@ -3,21 +3,15 @@ import ProjectImage from './assets/images/project_image.png';
 import OurProjects from './components/OurProjects';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import { useState } from 'react';
+import { ScrollRestoration } from 'react-router-dom';
 
 
 export default function Products() {
-    const [activeSection, setActiveSection] = useState({
-        index: 0,
-        origin: 0,
-        directioin: '',
-    });
 
     return (
         <>
+            <ScrollRestoration />
             <Navbar
-                activeIndex={activeSection.index}
-                slideTOPass={0}
             />
             <ReactFullpage
                 menu="#menu"
@@ -29,13 +23,6 @@ export default function Products() {
                 scrollOverflowReset
                 autoScrolling
                 scrollingSpeed={700}
-                onLeave={(origin, destination, direction) => {
-                    setActiveSection({
-                        index: destination.index,
-                        origin: origin.index,
-                        directioin: direction
-                    });
-                }}
                 licenseKey=""
                 render={() => {
                     return (

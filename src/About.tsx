@@ -5,20 +5,17 @@ import Vision from './components/Vision';
 import OurServices from './components/OurServices';
 import ServiceImage from './assets/artifacts/services.png';
 import Career from './components/Career';
-import { useState } from 'react';
+import SoundDesignVid from './assets/motion_graphics/sounddesign.mp4'
+import AnimationVid from './assets/motion_graphics/Animation.mp4'
+import StoryVid from './assets/motion_graphics/book2.mp4'
+import { ScrollRestoration } from 'react-router-dom';
 
 export default function About() {
-    const [activeSection, setActiveSection] = useState({
-        index: 0,
-        origin: 0,
-        directioin: '',
-    });
 
     return (
         <>
+            <ScrollRestoration />
             <Navbar
-                activeIndex={activeSection.index}
-                slideTOPass={0}
             />
             <ReactFullpage
                 menu="#menu"
@@ -30,13 +27,6 @@ export default function About() {
                 scrollOverflowReset
                 autoScrolling
                 scrollingSpeed={700}
-                onLeave={(origin, destination, direction) => {
-                    setActiveSection({
-                        index: destination.index,
-                        origin: origin.index,
-                        directioin: direction
-                    });
-                }}
                 licenseKey=""
                 render={() => {
                     return (
@@ -51,6 +41,7 @@ export default function About() {
                                             heading={item.heading}
                                             content={item.content}
                                             image={ServiceImage}
+                                            video={item.video}
                                         />
                                     )
                                 })
@@ -68,14 +59,17 @@ export default function About() {
 const ServicesContent = [
     {
         heading: '⁠Animation, Storytelling, Character Development',
-        content: 'Lorem ipsum dolor sit amet consectetur. Pharetra nisl vel praesent sit. Nisl lectus pharetra ut venenatis in gravida. Sagittis pellentesque convallis quam scelerisque. Ut nisl adipiscing varius sed fames. Sagittis blandit turpis sit tincidunt nulla tellus enim sit. Consectetur egestas tortor fermentum blandit Lorem ipsum dolor sit amet consectetur.'
+        content: 'Lorem ipsum dolor sit amet consectetur. Pharetra nisl vel praesent sit. Nisl lectus pharetra ut venenatis in gravida. Sagittis pellentesque convallis quam scelerisque. Ut nisl adipiscing varius sed fames. Sagittis blandit turpis sit tincidunt nulla tellus enim sit. Consectetur egestas tortor fermentum blandit Lorem ipsum dolor sit amet consectetur.',
+        video: AnimationVid
     },
     {
         heading: 'Sound design',
-        content: 'Lorem ipsum dolor sit amet consectetur. Pharetra nisl vel praesent sit. Nisl lectus pharetra ut venenatis in gravida. Sagittis pellentesque convallis quam scelerisque. Ut nisl adipiscing varius sed fames. Sagittis blandit turpis sit tincidunt nulla tellus enim sit. Consectetur egestas tortor fermentum blandit Lorem ipsum dolor sit amet consectetur.'
+        content: 'Lorem ipsum dolor sit amet consectetur. Pharetra nisl vel praesent sit. Nisl lectus pharetra ut venenatis in gravida. Sagittis pellentesque convallis quam scelerisque. Ut nisl adipiscing varius sed fames. Sagittis blandit turpis sit tincidunt nulla tellus enim sit. Consectetur egestas tortor fermentum blandit Lorem ipsum dolor sit amet consectetur.',
+        video: SoundDesignVid
     },
     {
         heading: 'Storybooks and Comics',
-        content: 'Lorem ipsum dolor sit amet consectetur. Pharetra nisl vel praesent sit. Nisl lectus pharetra ut venenatis in gravida. Sagittis pellentesque convallis quam scelerisque. Ut nisl adipiscing varius sed fames. Sagittis blandit turpis sit tincidunt nulla tellus enim sit. Consectetur egestas tortor fermentum blandit Lorem ipsum dolor sit amet consectetur.'
+        content: 'Lorem ipsum dolor sit amet consectetur. Pharetra nisl vel praesent sit. Nisl lectus pharetra ut venenatis in gravida. Sagittis pellentesque convallis quam scelerisque. Ut nisl adipiscing varius sed fames. Sagittis blandit turpis sit tincidunt nulla tellus enim sit. Consectetur egestas tortor fermentum blandit Lorem ipsum dolor sit amet consectetur.',
+        video: StoryVid
     },
 ]

@@ -131,6 +131,10 @@ body {
   }
 }
 
+::-webkit-scrollbar {
+  visibility: hidden;
+}
+
 /* ------------ Tag Repeated Styles ----------- */
 h1,
 h2,
@@ -144,8 +148,9 @@ label,
 }
 
 h1 {
-  @apply xl:text-[90px] lg:text-7xl md:text-6xl 
-  text-4xl;
+  @apply xl:text-[5.5rem] lg:text-7xl md:text-6xl 
+  text-[2.5rem];
+  line-height: 1;
 }
 
 h2 {
@@ -162,7 +167,7 @@ h4 {
 }
 
 section {
-  @apply relative min-h-screen h-dvh flex
+  @apply relative min-h-screen flex flex-row
   place-items-center justify-center overflow-x-hidden;
 }
 
@@ -282,6 +287,17 @@ input:-webkit-autofill:active {
   background-blend-mode: color;
 }
 
+.animate-bouncing {
+  animation: bouncing 1s infinite alternate;
+}
+.video .swiper-wrapper {
+  width: fit-content !important;
+}
+
+.video .swiper-slide {
+  width: fit-content !important;
+}
+
 /* ------------- Banner Component ------------------ */
 .banner {
   background-image: url("assets/images/banner_background.png");
@@ -294,7 +310,7 @@ input:-webkit-autofill:active {
 
 .mouse_down {
   @apply relative z-10 border border-white border-dashed 
-  rounded-full lg:w-14 lg:h-14 h-12 w-12 flex flex-col 
+  rounded-full h-12 w-12 flex flex-col 
   items-center justify-center;
 }
 
@@ -308,9 +324,10 @@ input:-webkit-autofill:active {
 }
 
 /* --------------- FullPage --------------- */
-/* .about.fp-table {
+.about.fp-table {
+  flex-direction: row;
   justify-content: end !important;
-} */
+}
 
 .fp-warning,
 .fp-watermark {
@@ -420,5 +437,14 @@ input:-webkit-autofill:active {
 @layer base {
   :root {
     --radius: 0.5rem;
+  }
+}
+
+@keyframes bouncing {
+  from {
+    transform: translateY(0) translateX(-50%);
+  }
+  to {
+    transform: translateY(-10px) translateX(-50%);
   }
 }
