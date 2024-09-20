@@ -85,7 +85,7 @@ export default function ProjectCarousel() {
                     </motion.button>
                 </Link>
             </div>
-            <div className="justify-center invisible h-0 md:h-full md:visible md:flex">
+            <div className="justify-center h-full md:flex">
                 <div className='flex flex-col justify-center gap-5'>
                     <Swiper
                         effect={'cards'}
