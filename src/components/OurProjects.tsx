@@ -11,9 +11,9 @@ export default function OurProjects(props: {
     projectUrl: string
 }) {
     return (
-        <section className='padding our_projects xl:items-end pt-32 items-center md:pb-24 pb-16 justify-end'>
+        <section className='padding our_projects xl:items-end pt-32 items-center md:pb-24 pb-16 justify-end w-screen'>
             <HeadingOverlay label='OUR PROJECTS' />
-            <div className="relative z-10 grid items-end justify-center md:grid-cols-2 w-full md:gap-y-16 gap-5 max-[80vh] mt-auto md:mt-0">
+            <div className="relative z-10 grid items-end justify-center md:grid-cols-2 w-full md:gap-y-16 gap-5 max-[80vh] md:mt-0">
 
                 <div className='space-y-3 relative z-10'>
                     {
@@ -93,7 +93,7 @@ export default function OurProjects(props: {
                         </motion.button>
                     </Link>
                 </div>
-                <div className='flex items-center justify-center md:justify-end'>
+                <div className='items-center justify-center md:justify-end hidden md:flex'>
                     <img
                         src={props.image}
                         alt='Project'
