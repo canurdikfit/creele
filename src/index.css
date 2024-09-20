@@ -190,9 +190,9 @@ input:-webkit-autofill:active {
   @apply absolute object-contain object-center z-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
 }
 
-.fp-overflow {
+/* .fp-overflow {
   width: 100%;
-}
+} */
 
 .video .fp-overflow {
   width: fit-content;
@@ -327,9 +327,7 @@ input:-webkit-autofill:active {
 .fp-table,
 .about.fp-table {
   flex-direction: row !important;
-  justify-content: end !important;
 }
-
 
 .fp-warning,
 .fp-watermark {
