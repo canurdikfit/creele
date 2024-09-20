@@ -324,10 +324,12 @@ input:-webkit-autofill:active {
 }
 
 /* --------------- FullPage --------------- */
+.fp-table,
 .about.fp-table {
   flex-direction: row !important;
   justify-content: end !important;
 }
+
 
 .fp-warning,
 .fp-watermark {
