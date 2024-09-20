@@ -25,7 +25,7 @@ export default function ProjectCarousel() {
     }
 
     return (
-        <div className="relative z-10 grid items-end justify-center md:grid-cols-2 w-full gap-y-16">
+        <div className="relative z-10 grid items-end justify-center md:grid-cols-2 w-full gap-y-8">
             <div className='space-y-3 relative z-10 text-left'>
                 <motion.h2
                     initial={{

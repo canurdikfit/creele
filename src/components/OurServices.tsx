@@ -48,7 +48,7 @@ export default function OurServices(props: {
                                 sizes='100%'
                                 alt="Art Works"
                                 className='object-contain object-center h-full w-auto max-w-sm max-h-72 md:max-h-full  relative z-10' />
-                            <video src={props.video} className='absolute h-4/5 w-[90%] top-[10%] left-[5%] z-0' autoPlay muted loop />
+                            <video src={props.video} className='absolute h-4/5 w-[90%] top-[10%] left-[5%] z-0' autoPlay muted loop controls={false} playsInline />
                         </motion.div>
 
                     </div>

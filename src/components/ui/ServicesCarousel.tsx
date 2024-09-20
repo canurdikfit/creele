@@ -29,7 +29,7 @@ export default function ServicesCarousel() {
                     initial={{
                         translateY: 150
                     }}
-                    whileInView={{
+                    animate={{
                         translateY: 0
                     }}
                     transition={{
@@ -43,7 +43,7 @@ export default function ServicesCarousel() {
                         sizes='100%'
                         className='w-full h-full object-contain object-center relative z-10'
                     />
-                    <video src={AnimationVid} className='absolute h-4/5 w-4/5 top-[5%] left-[10%] z-0' autoPlay muted loop />
+                    <video src={AnimationVid} className='absolute h-4/5 w-4/5 top-[5%] left-[10%] z-0' autoPlay muted loop controls={false} playsInline />
                 </motion.div>
             </SwiperSlide>
             <SwiperSlide className='xl:max-w-80 lg:max-w-60 max-w-52'>
@@ -51,7 +51,7 @@ export default function ServicesCarousel() {
                     initial={{
                         translateY: 150
                     }}
-                    whileInView={{
+                    animate={{
                         translateY: 0
                     }}
                     transition={{
@@ -66,7 +66,7 @@ export default function ServicesCarousel() {
                         sizes='100%'
                         className='w-full h-full object-contain object-center relative z-10'
                     />
-                    <video src={SoundDesignVid} className='absolute h-4/5 w-[90%] top-[3%] left-[10%] z-0' autoPlay muted loop />
+                    <video src={SoundDesignVid} className='absolute h-4/5 w-[90%] top-[3%] left-[10%] z-0' autoPlay muted controls={false} playsInline loop />
                 </motion.div>
             </SwiperSlide>
             <SwiperSlide className='xl:max-w-80 lg:max-w-60 max-w-52'>
@@ -74,7 +74,7 @@ export default function ServicesCarousel() {
                     initial={{
                         translateY: 150
                     }}
-                    whileInView={{
+                    animate={{
                         translateY: 0
                     }}
                     transition={{
@@ -89,7 +89,7 @@ export default function ServicesCarousel() {
                         sizes='100%'
                         className='w-full h-full object-contain object-center relative z-10'
                     />
-                    <video src={StoryVid} className='absolute h-4/5 w-4/5 top-[5%] left-[10%] z-0' autoPlay muted loop />
+                    <video src={StoryVid} className='absolute h-4/5 w-4/5 top-[5%] left-[10%] z-0' controls={false} playsInline autoPlay muted loop />
                 </motion.div>
             </SwiperSlide>
         </Swiper>

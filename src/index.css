@@ -190,9 +190,11 @@ input:-webkit-autofill:active {
   @apply absolute object-contain object-center z-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
 }
 
-/* .fp-overflow {
+.fp-overflow {
   width: 100%;
-} */
+  margin: 0;
+  padding: 0;
+}
 
 .video .fp-overflow {
   width: fit-content;

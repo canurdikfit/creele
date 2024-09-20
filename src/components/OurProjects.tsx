@@ -11,7 +11,7 @@ export default function OurProjects(props: {
     projectUrl: string
 }) {
     return (
-        <section className='padding our_projects xl:items-end md:pb-24 pb-16 justify-end'>
+        <section className='padding our_projects xl:items-end pt-32 items-center md:pb-24 pb-16 justify-end'>
             <HeadingOverlay label='OUR PROJECTS' />
             <div className="relative z-10 grid items-end justify-center md:grid-cols-2 w-full md:gap-y-16 gap-5 max-[80vh] mt-auto md:mt-0">
 
